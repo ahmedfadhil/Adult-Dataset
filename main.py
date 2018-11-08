@@ -55,10 +55,10 @@ for x in train.columns:
 train.target.value_counts()
 
 # Building a Random Forest Model
-
 y = train['target']
 
 del train['target']
+
 
 X = train
 
@@ -79,3 +79,4 @@ clf.predict(X_test)
 prediction = clf.predict(X_test)
 accuracy = accuracy_score(np.array(y_test), prediction)
 print('The accuracy of Random Forest is {}'.format(accuracy))
+
